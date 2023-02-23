@@ -10,6 +10,7 @@ let jsonParser = bodyParser.json()
 app.get('/', (req, res) => {
 	res.send("geggge")
 })
+app.use(cors())
 
 app.post('/submitKMI', jsonParser, async (req, res) => {
 	const notion = new Client({ auth: "secret_EYPtGjpPPA7Nv1KnyYtrZv0IDLjsaYh7WllkocnrtYB"})
